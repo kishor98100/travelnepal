@@ -1,0 +1,123 @@
+{% extends 'templetes/app.twig' %}
+
+{% block content %}
+
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
+<!-- main body starts -->
+
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-10 main-body" id="main-body">
+
+    <!-- main content starts -->
+    <!-- -------------------------------------------------------------------------------------------------------------------- -->
+
+    <div class=" main-content">
+        <div class=" row body-header clearfix">
+            <div class="col-md-6 col-lg-4 col-xl-4">
+                <h6 class="page-title">
+                    Dashboard
+                </h6>
+            </div>
+            <div class="bread col-md-6 col-lg-8 col-xl-8">
+                <nav class="breadcrumb">
+                    <span class="breadcrumb-item">Dashboard</span>
+                    <span class="breadcrumb-item">Travel Partners</span>
+                    <span class="breadcrumb-item">Edit</span>
+                </nav>
+            </div>
+        </div>
+
+
+        <div class="clearfix"></div>
+        <div class="card mt-3 mb-3">
+
+            <div class="card-header">
+                Edit Travel Partners
+
+            </div>
+            <div class="card-body">
+                <form action="{{ path_for('home.putPartner') }}" method="POST" enctype="multipart/form-data" class="form-horizantal"
+                    id="cardaddform">
+                    <input type="hidden" name="id" value="{{ partner.id }}">
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="nameofcompany" class="form-label">Name of The Company</label>
+                            <input type="text" name="nameofcompany" id="nameofcompany" class="form-control" value="{{ partner.nameofcompany }}">
+                        </div>
+                        <div class="
+                                form-group col-md-6">
+                            <label for="address" class="form-label">Address</label>
+                            <input type="text" name="address" id="address" class="form-control" value="{{ partner.address }}">
+                        </div>
+                    </div>
+                    <div class="
+                                form-row">
+                        <div class="form-group col-md-6">
+                            <label for="district" class="form-label">District</label>
+                            <input type="text" name="district" id="district" class="form-control" value="{{ partner.district }}">
+                        </div>
+                        <div class="
+                                    form-group col-md-6">
+                            <label for="contact" class="form-label">Contact</label>
+                            <input type="text" name="contact" id="contact" class="form-control" value="{{ partner.contact }}">
+                        </div>
+                    </div>
+                    <div class="
+                                    form-row">
+                        <div class="form-group col-md-6">
+                            <label for="phoneno" class="form-label">Phone no.</label>
+                            <input type="text" name="phoneno" id="phoneno" class="form-control" value="{{ partner.phoneno }}">
+                        </div>
+                        <div class="
+                                        form-group col-md-6">
+                            <label for="description" class="form-label">Description of company</label>
+                            <input type="text" name="description" id="description" class="form-control" value="{{ partner.description }}">
+
+                        </div>
+                    </div>
+                    <div class="
+                                        form-row">
+                        <div class="form-group col-md-6">
+                            <label for="image1" class="form-label">Images</label>
+                            <input type="file" name="image1" id="image1" class="form-control" accept="image/*">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="image2" class="form-label">Images</label>
+                            <input type="file" name="image2" id="image2" class="form-control" accept="image/*">
+
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="details" class="form-label">Details of Company</label>
+                            <textarea name="details" id="details" rows="3" class="form-control">{{ partner.details }}</textarea>
+
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="services" class="form-label">Services of company</label>
+                            <textarea name="services" id="services" rows="3" class="form-control">{{ partner.services }}</textarea>
+                        </div>
+                    </div>
+                    <div class="form-row mx-auto w-25">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- ------------------------------------------------------------------------------------------------------------------- -->
+    <!-- main content ends -->
+</div>
+<!-- main body ends -->
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
+
+</div>
+<!-- body parts ends -->
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
+
+{% endblock %}

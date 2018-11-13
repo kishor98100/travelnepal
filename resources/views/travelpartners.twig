@@ -1,0 +1,99 @@
+{% extends 'templetes/app.twig' %}
+
+{% block content %}
+
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
+<!-- main body starts -->
+
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-10 main-body" id="main-body">
+    {% if flash.getMessage('success') %}
+
+    <div class="alert alert-success alert-dismissible fade show cs-alert" role="alert">
+
+        {{ flash.getMessage('success') | first }}
+        <button type="
+        button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endif %}
+    <!-- main content starts -->
+    <!-- -------------------------------------------------------------------------------------------------------------------- -->
+
+    <div class=" main-content">
+        <div class=" row body-header clearfix">
+            <div class="col-md-6 col-lg-4 col-xl-4">
+                <h6 class="page-title">
+                    Dashboard
+                </h6>
+            </div>
+            <div class="bread col-md-6 col-lg-8 col-xl-8">
+                <nav class="breadcrumb">
+                    <span class="breadcrumb-item">Dashboard</span>
+                </nav>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+        <div class="card mt-3 mb-3">
+
+            <div class="card-header">
+                Travel Partners
+                <span class="float-right" id="controlpanel"></span>
+            </div>
+            <div class="card-body">
+                <table class="table" id="tablePartner">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name of Company</th>
+                            <th>Address</th>
+                            <th>Description</th>
+                            <th>Details</th>
+                            <th>Images</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for data in partners %}
+                        <tr>
+                            <td>{{ data.id }}</td>
+                            <td>{{ data.nameofcompany }}</td>
+                            <td>{{ data.details }}</td>
+                            <td>{{ data.description }}</td>
+                            <td>{{ data.details }}</td>
+                            <td>
+
+                                <img src="{{ base_url() }}/uploads/{{ data.image1 }}" alt="" width="75px" height="75px">
+                                <img src="{{ base_url() }}/uploads/{{ data.image2 }}" alt="" width="75px" height="75px">
+
+                            </td>
+                            <td>
+                                <a href="{{ base_url() }}/dash/travel-partners/edit/{{ data.id }}" class="btn btn-primary">
+                                    <i class="fa fa-pencil"></i>
+                                </a>
+                                <a href="{{ base_url() }}/dash/travel-partners/delete/{{ data.id }}" class="btn btn-danger">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ------------------------------------------------------------------------------------------------------------------- -->
+    <!-- main content ends -->
+</div>
+<!-- main body ends -->
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
+
+</div>
+<!-- body parts ends -->
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
+
+{% endblock %}

@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.bg-wrapper {
+    position: absolute;
+    width: 98%;
+    height: 100%;
+    background: url('../img/bg1.jpeg') no-repeat;
+    filter: blur(4px);
+    margin: 0;
+    z-index: -1;
+    /* padding: 15px */
+}
+
+.login-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 20px;
+}
+
+.form-horizantal {
+    margin-top: 50px;
+}
+
+.login-wrapper,
+.card {
+    position: relative;
+    top: 50px;
+    width: 55%;
+    margin: 0 auto;
+    height: 400px;
+    z-index: 999;
+
+}
+
+.login-btn {
+    width: 50%;
+    margin: 0 95px;
+
+}

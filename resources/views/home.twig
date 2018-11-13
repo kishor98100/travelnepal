@@ -1,0 +1,120 @@
+{% extends 'templetes/app.twig' %}
+
+{% block content %}
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
+<!-- main body starts -->
+
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-10 main-body" id="main-body">
+
+
+    <!-- main content starts -->
+    <!-- -------------------------------------------------------------------------------------------------------------------- -->
+
+    <div class=" main-content">
+        <div class=" row body-header clearfix">
+            <div class="col-md-6 col-lg-4 col-xl-4">
+                <h6 class="page-title">
+                    Dashboard
+                </h6>
+            </div>
+            <div class="bread col-md-6 col-lg-8 col-xl-8">
+                <nav class="breadcrumb">
+                    <span class="breadcrumb-item">Dashboard</span>
+                </nav>
+            </div>
+        </div>
+
+        <section class="content">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12 col-xl-3">
+                    <div class="info-box">
+                        <span class="box-image bg-aqua">
+                            <i class="fa fa-map"></i>
+                        </span>
+                        <div class="info-box-content">
+                            <span class="info-details">
+                                Total Places
+                            </span>
+                            <span class=" badge badge-primary number">
+                                {{ tr }}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 col-sm-6 col-xs-12 col-xl-3">
+                    <div class="info-box">
+                        <span class="box-image bg-red">
+                            <i class="fa fa-hotel"></i>
+                        </span>
+                        <div class="info-box-content">
+                            <span class="info-details">
+                                Total Hotels
+                            </span>
+                            <span class="badge badge-danger number">
+                                {{ hr }}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12 col-xl-3">
+                    <div class="info-box">
+                        <span class="box-image bg-green">
+                            <i class="fa fa-snowflake-o"></i>
+                        </span>
+                        <div class="info-box-content">
+                            <span class="info-details">
+                                Total Festivals
+                            </span>
+                            <span class="badge badge-success number">
+                                {{ fr }}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6  col-sm-6 col-xs-12 col-xl-3">
+                    <div class="info-box">
+                        <span class="box-image bg-orange">
+                            <i class="fa fa-users"></i>
+                        </span>
+                        <div class="info-box-content">
+                            <span class="info-details">
+                                total Partners
+                            </span>
+                            <span class=" badge badge-warning number">
+                                {{ pr }}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="clearfix"></div>
+
+        <div class="card mb-3">
+            <div class="card-header">
+                Overview of Club
+            </div>
+            <div class="card-body">
+
+                <canvas id="myChart" height: "300px" width: "786px">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------------------------------------------------------------------------------------------------------- -->
+    <!-- main content ends -->
+</div>
+<!-- main body ends -->
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
+
+</div>
+<!-- body parts ends -->
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
+
+
+{% endblock %}

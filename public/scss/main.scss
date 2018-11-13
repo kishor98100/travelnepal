@@ -1,0 +1,1085 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: abeezee;
+    background: rgba(175, 175, 175, 0.644);
+}
+
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+.separater {
+    width: 155px;
+    height: 35px;
+    margin: 0 auto;
+    .left-div {
+        width: 55px;
+        background: #000000;
+        height: 1px;
+        float: left;
+        margin-right: 10px;
+    }
+    .middle {
+        width: 15px;
+        height: 15px;
+        background: #000000;
+        transform: rotate(45deg);
+        float: left;
+        vertical-align: middle;
+        margin-top: -7px;
+    }
+    .right-div {
+        width: 55px;
+        background: #000000;
+        height: 1px;
+        float: left;
+        margin-left: 10px;
+    }
+}
+
+header {
+    height: 180px;
+    background: #fffa00;
+    padding: 5px 5px;
+    position: relative;
+    .club_logo_section {
+        vertical-align: middle;
+        img {
+            height: 112px;
+            padding-left: 10px;
+            justify-content: center;
+        }
+        .smallonly {
+            display: none;
+        }
+        .slogan {
+            color: rgba(0, 0, 0, .5);
+            margin-left: 5px;
+        }
+    }
+    .club_name_section {
+        vertical-align: middle;
+        h2.club_name_en,
+        h2.club_name_np {
+            text-align: center;
+            font-weight: bold;
+            color: blue;
+        }
+        h6.district_name {
+            text-align: center;
+            font-size: 16px;
+            font-style: italic;
+            font-weight: bold;
+            letter-spacing: 1;
+            color: rgba(0, 0, 0, .5);
+        }
+    }
+    .inter_logo_section {
+        img {
+            padding: 5px;
+        }
+    }
+    #main-navigation {
+        height: 40px;
+        margin-top: -8px;
+        vertical-align: middle;
+        ul.navbar-nav li a.nav-link {
+            width: 175px;
+            color: red;
+            display: block;
+            transition: .5s ease-out;
+            cursor: pointer;
+            height: 30px;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        ul.navbar-nav li a.nav-link:hover {
+            background: red;
+            color: white;
+            border-bottom: 2px solid black;
+            transition: all ease-out .5s;
+        }
+    }
+}
+
+.slider {
+    width: 100%;
+    position: relative;
+    img {
+        width: 100%;
+    }
+    .inner_content {
+        width: 100%;
+        position: absolute;
+        bottom: 40%;
+        text-align: center;
+        h1.club_name {
+            color: white;
+            font-weight: bold;
+        }
+        h6 {
+            color: white;
+        }
+    }
+}
+
+.club-info {
+    text-align: center;
+    span.club-name {
+        font-size: 26px;
+        color: #696969;
+        font-style: italic;
+    }
+    h1.wwr {
+        color: #383838;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+    .info {
+        width: 47%;
+        margin: 0 auto;
+        text-align: center;
+        color: #696969;
+    }
+}
+
+section.activities {
+    .title h3 {
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    .title small {
+        font-family: abeezee;
+        color: #696969;
+    }
+    .thumb-wrapper {
+        .thumb-row {
+            .box {
+                max-width: 400px;
+                width: 33.3334%;
+                float: left;
+                overflow: hidden;
+                position: relative;
+            }
+            .imgbox {
+                position: relative;
+                overflow: hidden;
+                img {
+                    max-width: 100%;
+                    transition: transform 2s;
+                }
+            }
+            .box:hover .imgbox img {
+                transform: scale(1.2);
+            }
+            .details {
+                .content h4 {
+                    position: absolute;
+                    top: 50%;
+                    left: 25%;
+                    color: white;
+                    transform: translate(0, -250px);
+                    text-align: center;
+                }
+                .content .icons-wrapper {
+                    position: absolute;
+                    top: 45%;
+                    left: 36%;
+                    transform: translate(0, 250px);
+                    .icons {
+                        padding: 10px;
+                        color: white;
+                        font-size: 20px;
+                        max-width: 100%;
+                    }
+                    .icons>.zoom,
+                    .icons>.view {
+                        color: white;
+                        transition: transform 2s;
+                    }
+                    .icons>.zoom:hover,
+                    .icons>.view:hover {
+                        transform: scale(1.5);
+                    }
+                }
+            }
+            .box:hover .content h4 {
+                transform: translate(0, -60px);
+                transition: transform 1s;
+                z-index: 2;
+            }
+            .box:hover .icons-wrapper {
+                transform: translate(0, -10px);
+                transition: transform 1s;
+                z-index: 3;
+            }
+            .box:hover .hover {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: rgba(0, 0, 255, 0.3);
+                z-index: 1;
+            }
+        }
+    }
+}
+
+.page-header {
+    height: 100px;
+    background: #e5e500;
+    h1 {
+        text-align: center;
+        padding: 25px 0;
+        color: rgba(18, 14, 14, 0.79);
+        font-weight: bold;
+    }
+}
+
+#contact-form {
+    width: 60%;
+    margin: 0 auto;
+    background: indianred;
+    border-radius: 10px;
+    form {
+        padding-top: 20px;
+    }
+    .contact-details {
+        padding-top: 20px;
+        h3,
+        h6 {
+            color: white;
+        }
+    }
+    span.required {
+        color: white;
+        font-size: 16px;
+    }
+}
+
+.footer {
+    margin-top: 20px;
+    height: 50px;
+    background: #3e3e3e;
+    text-align: center;
+    color: white;
+    p {
+        padding-top: 7px;
+    }
+}
+
+// media queries
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// media queries for width less than 1200px
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+@media screen and (max-width:1200px) {
+    header {
+        height: auto;
+        background: #fffa00;
+        padding: 5px 5px;
+        position: relative;
+        .club_logo_section {
+            vertical-align: middle;
+            width: 12% !important;
+            float: left;
+            img {
+                height: 112px;
+                padding-left: 10px;
+                justify-content: center;
+            }
+            .slogan {
+                color: rgba(0, 0, 0, .5);
+                margin-left: 5px;
+            }
+        }
+        .club_name_section {
+            vertical-align: middle;
+            h2.club_name_en,
+            h2.club_name_np {
+                text-align: center;
+                font-weight: bold;
+                color: blue;
+            }
+            h6.district_name {
+                text-align: center;
+                font-size: 16px;
+                font-style: italic;
+                font-weight: bold;
+                letter-spacing: 1;
+                color: rgba(0, 0, 0, .5);
+            }
+        }
+        .inter_logo_section {
+            margin: 0;
+            padding: 0;
+            img {
+                padding: 5px;
+            }
+        }
+        #main-navigation {
+            height: auto;
+            margin-top: -8px;
+            vertical-align: middle;
+            ul.navbar-nav li a.nav-link {
+                width: 150px;
+                color: red;
+                display: block;
+                transition: .5s ease-out;
+                cursor: pointer;
+                height: 30px;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+            }
+            ul.navbar-nav li a.nav-link:hover {
+                background: red;
+                color: white;
+                border-bottom: 2px solid black;
+                transition: all ease-out .5s;
+            }
+        }
+    }
+    .slider {
+        width: 100%;
+        position: relative;
+        img {
+            width: 100%;
+        }
+        .inner_content {
+            width: 100%;
+            position: absolute;
+            bottom: 40%;
+            text-align: center;
+            h1.club_name {
+                color: white;
+                font-weight: bold;
+            }
+            h6 {
+                color: white;
+            }
+        }
+    }
+    .club-info {
+        text-align: center;
+        span.club-name {
+            font-size: 26px;
+            color: #696969;
+            font-style: italic;
+        }
+        h1.wwr {
+            color: #383838;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        .info {
+            width: 47%;
+            margin: 0 auto;
+            text-align: center;
+            color: #696969;
+        }
+    }
+    section.activities {
+        .title h3 {
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .title small {
+            font-family: abeezee;
+            color: #696969;
+        }
+        .thumb-wrapper {
+            .thumb-row {
+                .box {
+                    max-width: 400px;
+                    width: 33.3334%;
+                    float: left;
+                    overflow: hidden;
+                    position: relative;
+                }
+                .imgbox {
+                    position: relative;
+                    overflow: hidden;
+                    img {
+                        max-width: 100%;
+                        transition: transform 2s;
+                    }
+                }
+                .box:hover .imgbox img {
+                    transform: scale(1.2);
+                }
+                .details {
+                    .content h4 {
+                        position: absolute;
+                        top: 50%;
+                        left: 12%;
+                        color: white;
+                        transform: translate(0, -250px);
+                    }
+                    .content .icons-wrapper {
+                        position: absolute;
+                        top: 45%;
+                        left: 36%;
+                        transform: translate(0, 250px);
+                        .icons {
+                            padding: 10px;
+                            color: white;
+                            font-size: 20px;
+                            max-width: 100%;
+                        }
+                        .icons>.zoom,
+                        .icons>.view {
+                            color: white;
+                            transition: transform 2s;
+                        }
+                        .icons>.zoom:hover,
+                        .icons>.view:hover {
+                            transform: scale(1.5);
+                        }
+                    }
+                }
+                .box:hover .content h4 {
+                    transform: translate(0, -60px);
+                    transition: transform 1s;
+                    z-index: 2;
+                }
+                .box:hover .icons-wrapper {
+                    transform: translate(0, -10px);
+                    transition: transform 1s;
+                    z-index: 3;
+                }
+                .box:hover .hover {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: rgba(0, 0, 255, 0.3);
+                    z-index: 1;
+                }
+            }
+        }
+    }
+    .footer {
+        margin-top: 20px;
+        height: 50px;
+        background: #3e3e3e;
+        text-align: center;
+        color: white;
+        p {
+            padding-top: 7px;
+        }
+    }
+}
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// media queries for width less than 992px
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+@media screen and (max-width:992px) {
+    header {
+        height: auto;
+        background: #fffa00;
+        padding: 5px 5px;
+        position: relative;
+        .club_logo_section {
+            vertical-align: middle;
+            img {
+                height: 112px;
+                padding-left: 10px;
+                justify-content: center;
+            }
+            .smallonly {
+                display: none;
+            }
+            .slogan {
+                color: rgba(0, 0, 0, .5);
+                margin-left: 5px;
+            }
+        }
+        .club_name_section {
+            vertical-align: middle;
+            h2.club_name_en,
+            h2.club_name_np {
+                text-align: center;
+                font-weight: bold;
+                color: blue;
+            }
+            h6.district_name {
+                text-align: center;
+                font-size: 16px;
+                font-style: italic;
+                font-weight: bold;
+                letter-spacing: 1;
+                color: rgba(0, 0, 0, .5);
+            }
+        }
+        .inter_logo_section {
+            img {
+                padding: 5px;
+            }
+        }
+        #main-navigation {
+            height: auto;
+            margin-top: -8px;
+            vertical-align: middle;
+            ul.navbar-nav li a.nav-link {
+                width: 175px;
+                color: red;
+                display: block;
+                transition: .5s ease-out;
+                cursor: pointer;
+                height: 30px;
+                margin: 0;
+                padding: 0;
+                text-align: justify;
+            }
+            ul.navbar-nav li a.nav-link:hover {
+                background: red;
+                color: white;
+                border-bottom: 2px solid black;
+                transition: all ease-out .5s;
+            }
+        }
+    }
+    .slider {
+        width: 100%;
+        position: relative;
+        img {
+            width: 100%;
+        }
+        .inner_content {
+            width: 100%;
+            position: absolute;
+            bottom: 40%;
+            text-align: center;
+            h1.club_name {
+                color: white;
+                font-weight: bold;
+            }
+            h6 {
+                color: white;
+            }
+        }
+    }
+    .club-info {
+        text-align: center;
+        span.club-name {
+            font-size: 26px;
+            color: #696969;
+            font-style: italic;
+        }
+        h1.wwr {
+            color: #383838;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        .info {
+            width: 47%;
+            margin: 0 auto;
+            text-align: center;
+            color: #696969;
+        }
+    }
+    section.activities {
+        .title h3 {
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .title small {
+            font-family: abeezee;
+            color: #696969;
+        }
+        .thumb-wrapper {
+            .thumb-row {
+                .box {
+                    max-width: 400px;
+                    width: 50%;
+                    float: left;
+                    overflow: hidden;
+                    position: relative;
+                }
+                .imgbox {
+                    position: relative;
+                    overflow: hidden;
+                    img {
+                        max-width: 100%;
+                        transition: transform 2s;
+                    }
+                }
+                .box:hover .imgbox img {
+                    transform: scale(1.2);
+                }
+                .details {
+                    .content h4 {
+                        position: absolute;
+                        top: 50%;
+                        left: 12%;
+                        color: white;
+                        transform: translate(0, -250px);
+                    }
+                    .content .icons-wrapper {
+                        position: absolute;
+                        top: 45%;
+                        left: 36%;
+                        transform: translate(0, 250px);
+                        .icons {
+                            padding: 10px;
+                            color: white;
+                            font-size: 20px;
+                            max-width: 100%;
+                        }
+                        .icons>.zoom,
+                        .icons>.view {
+                            color: white;
+                            transition: transform 2s;
+                        }
+                        .icons>.zoom:hover,
+                        .icons>.view:hover {
+                            transform: scale(1.5);
+                        }
+                    }
+                }
+                .box:hover .content h4 {
+                    transform: translate(0, -60px);
+                    transition: transform 1s;
+                    z-index: 2;
+                }
+                .box:hover .icons-wrapper {
+                    transform: translate(0, -10px);
+                    transition: transform 1s;
+                    z-index: 3;
+                }
+                .box:hover .hover {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: rgba(0, 0, 255, 0.3);
+                    z-index: 1;
+                }
+            }
+        }
+    }
+    .footer {
+        margin-top: 20px;
+        height: 50px;
+        background: #3e3e3e;
+        text-align: center;
+        color: white;
+        p {
+            padding-top: 7px;
+        }
+    }
+}
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// media queries for width less than 768px
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+@media screen and (max-width:768px) {
+    header {
+        height: auto;
+        background: #fffa00;
+        padding: 5px 5px;
+        position: relative;
+        .club_logo_section {
+            vertical-align: middle;
+            img {
+                height: 112px;
+                padding-left: 10px;
+                justify-content: center;
+            }
+            .smallonly {
+                display: none;
+            }
+            .slogan {
+                color: rgba(0, 0, 0, .5);
+                margin-left: 5px;
+            }
+        }
+        .club_name_section {
+            vertical-align: middle;
+            h2.club_name_en,
+            h2.club_name_np {
+                text-align: center;
+                font-weight: bold;
+                color: blue;
+            }
+            h6.district_name {
+                text-align: center;
+                font-size: 16px;
+                font-style: italic;
+                font-weight: bold;
+                letter-spacing: 1;
+                color: rgba(0, 0, 0, .5);
+            }
+        }
+        .inter_logo_section {
+            position: relative;
+            img {
+                padding: 5px;
+            }
+        }
+        #main-navigation {
+            height: auto;
+            margin-top: -8px;
+            vertical-align: middle;
+            ul.navbar-nav li a.nav-link {
+                width: 100%;
+                color: red;
+                display: block;
+                transition: .5s ease-out;
+                cursor: pointer;
+                height: 30px;
+                margin: 0;
+                padding: 0;
+                text-align: justify;
+            }
+            ul.navbar-nav li a.nav-link:hover {
+                background: red;
+                color: white;
+                border-bottom: 2px solid black;
+                transition: all ease-out .5s;
+            }
+        }
+    }
+    .slider {
+        width: 100%;
+        position: relative;
+        img {
+            width: 100%;
+        }
+        .inner_content {
+            width: 100%;
+            position: absolute;
+            bottom: 40%;
+            text-align: center;
+            h1.club_name {
+                color: white;
+                font-weight: bold;
+            }
+            h6 {
+                color: white;
+            }
+        }
+    }
+    .club-info {
+        text-align: center;
+        span.club-name {
+            font-size: 26px;
+            color: #696969;
+            font-style: italic;
+        }
+        h1.wwr {
+            color: #383838;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        .info {
+            width: 47%;
+            margin: 0 auto;
+            text-align: center;
+            color: #696969;
+        }
+    }
+    section.activities {
+        .title h3 {
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .title small {
+            font-family: abeezee;
+            color: #696969;
+        }
+        .thumb-wrapper {
+            .thumb-row {
+                .box {
+                    max-width: 400px;
+                    width: 50%;
+                    float: left;
+                    overflow: hidden;
+                    position: relative;
+                }
+                .imgbox {
+                    position: relative;
+                    overflow: hidden;
+                    img {
+                        max-width: 100%;
+                        transition: transform 2s;
+                    }
+                }
+                .box:hover .imgbox img {
+                    transform: scale(1.2);
+                }
+                .details {
+                    .content h4 {
+                        position: absolute;
+                        top: 50%;
+                        left: 12%;
+                        color: white;
+                        transform: translate(0, -250px);
+                    }
+                    .content .icons-wrapper {
+                        position: absolute;
+                        top: 45%;
+                        left: 36%;
+                        transform: translate(0, 250px);
+                        .icons {
+                            padding: 10px;
+                            color: white;
+                            font-size: 20px;
+                            max-width: 100%;
+                        }
+                        .icons>.zoom,
+                        .icons>.view {
+                            color: white;
+                            transition: transform 2s;
+                        }
+                        .icons>.zoom:hover,
+                        .icons>.view:hover {
+                            transform: scale(1.5);
+                        }
+                    }
+                }
+                .box:hover .content h4 {
+                    transform: translate(0, -60px);
+                    transition: transform 1s;
+                    z-index: 2;
+                }
+                .box:hover .icons-wrapper {
+                    transform: translate(0, -10px);
+                    transition: transform 1s;
+                    z-index: 3;
+                }
+                .box:hover .hover {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: rgba(0, 0, 255, 0.3);
+                    z-index: 1;
+                }
+            }
+        }
+    }
+    .footer {
+        margin-top: 20px;
+        height: 50px;
+        background: #3e3e3e;
+        text-align: center;
+        color: white;
+        p {
+            padding-top: 7px;
+        }
+    }
+}
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// media queries for width less than 576px
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+@media screen and (max-width:576px) {
+    header {
+        height: auto;
+        background: #fffa00;
+        padding: 5px 5px;
+        position: relative;
+        .club_logo_section {
+            vertical-align: middle;
+            width: 55%;
+            margin: 0 auto;
+            img {
+                height: 112px;
+                padding-left: 10px;
+                justify-content: center;
+            }
+            .slogan {
+                color: rgba(0, 0, 0, .5);
+                margin-left: 5px;
+            }
+        }
+        .club_name_section {
+            vertical-align: middle;
+            h2.club_name_en,
+            h2.club_name_np {
+                text-align: center;
+                font-weight: bold;
+                color: blue;
+            }
+            h6.district_name {
+                text-align: center;
+                font-size: 16px;
+                font-style: italic;
+                font-weight: bold;
+                letter-spacing: 1;
+                color: rgba(0, 0, 0, .5);
+            }
+        }
+        .inter_logo_section {
+            display: flex;
+            img {
+                padding: 5px;
+            }
+        }
+        #main-navigation {
+            height: auto;
+            margin-top: -8px;
+            vertical-align: middle;
+            ul.navbar-nav li a.nav-link {
+                width: 100%;
+                color: red;
+                display: block;
+                transition: .5s ease-out;
+                cursor: pointer;
+                height: 30px;
+                margin: 0;
+                padding: 0;
+                text-align: justify;
+            }
+            ul.navbar-nav li a.nav-link:hover {
+                background: red;
+                color: white;
+                border-bottom: 2px solid black;
+                transition: all ease-out .5s;
+            }
+        }
+    }
+    .slider {
+        width: 100%;
+        position: relative;
+        img {
+            width: 100%;
+        }
+        .inner_content {
+            width: 100%;
+            position: absolute;
+            bottom: 15%;
+            text-align: center;
+            h1.club_name {
+                color: white;
+                font-weight: bold;
+                font-size: 22px;
+            }
+            h6 {
+                color: white;
+            }
+        }
+    }
+    .club-info {
+        text-align: center;
+        span.club-name {
+            font-size: 26px;
+            color: #696969;
+            font-style: italic;
+        }
+        h1.wwr {
+            color: #383838;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        .info {
+            width: 47%;
+            margin: 0 auto;
+            text-align: center;
+            color: #696969;
+        }
+    }
+    section.activities {
+        .title h3 {
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .title small {
+            font-family: abeezee;
+            color: #696969;
+        }
+        .thumb-wrapper {
+            .thumb-row {
+                .box {
+                    max-width: 400px;
+                    width: 100%;
+                    float: none;
+                    overflow: hidden;
+                    position: relative;
+                    margin: 0 auto;
+                }
+                .imgbox {
+                    position: relative;
+                    overflow: hidden;
+                    img {
+                        max-width: 100%;
+                        transition: transform 2s;
+                    }
+                }
+                .box:hover .imgbox img {
+                    transform: scale(1.2);
+                }
+                .details {
+                    .content h4 {
+                        position: absolute;
+                        top: 50%;
+                        left: 12%;
+                        color: white;
+                        transform: translate(0, -250px);
+                    }
+                    .content .icons-wrapper {
+                        position: absolute;
+                        top: 45%;
+                        left: 36%;
+                        transform: translate(0, 250px);
+                        .icons {
+                            padding: 10px;
+                            color: white;
+                            font-size: 20px;
+                            max-width: 100%;
+                        }
+                        .icons>.zoom,
+                        .icons>.view {
+                            color: white;
+                            transition: transform 2s;
+                        }
+                        .icons>.zoom:hover,
+                        .icons>.view:hover {
+                            transform: scale(1.5);
+                        }
+                    }
+                }
+                .box:hover .content h4 {
+                    transform: translate(0, -60px);
+                    transition: transform 1s;
+                    z-index: 2;
+                }
+                .box:hover .icons-wrapper {
+                    transform: translate(0, -10px);
+                    transition: transform 1s;
+                    z-index: 3;
+                }
+                .box:hover .hover {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: rgba(0, 0, 255, 0.3);
+                    z-index: 1;
+                }
+            }
+        }
+    }
+    .footer {
+        margin-top: 20px;
+        height: 50px;
+        background: #3e3e3e;
+        text-align: center;
+        color: white;
+        p {
+            padding-top: 7px;
+        }
+    }
+}

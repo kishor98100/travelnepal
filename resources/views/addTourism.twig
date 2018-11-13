@@ -1,0 +1,146 @@
+{% extends 'templetes/app.twig' %}
+
+{% block content %}
+
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
+<!-- main body starts -->
+
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-10 main-body" id="main-body">
+
+
+
+
+    <!-- main content starts -->
+    <!-- -------------------------------------------------------------------------------------------------------------------- -->
+
+    <div class=" main-content">
+        <div class=" row body-header clearfix">
+            <div class="col-md-6 col-lg-4 col-xl-4">
+                <h6 class="page-title">
+                    Dashboard
+                </h6>
+            </div>
+            <div class="bread col-md-6 col-lg-8 col-xl-8">
+                <nav class="breadcrumb">
+                    <span class="breadcrumb-item">Dashboard</span>
+                    <span class="breadcrumb-item">Tourism Places</span>
+                    <span class="breadcrumb-item">Add</span>
+                </nav>
+            </div>
+        </div>
+
+
+        <div class="clearfix"></div>
+        <div class="card mt-3 mb-3">
+
+            <div class="card-header">
+                Add Tourism Places
+
+            </div>
+            <div class="card-body">
+                <form action="{{ path_for('home.postTourism') }}" method="POST" enctype="multipart/form-data" class="form-horizantal"
+                    id="cardaddform" autocomplete="off">
+                    <div class="form-row">
+                        <div class=" form-group col-md-6">
+                            <label for="nameofplace" class="form-label">Name of The Place</label>
+                            <input type="text" name="nameofplace" id="nameofplace" class="form-control {{ errors.nameofplace ? 'has-error' : ''}}"
+                                value="{{ old.nameofplace }}">
+                            {% if errors.nameofplace %}
+                            <span class="
+                                text text-danger">{{ errors.nameofplace |
+                                first }}</span>
+                            {% endif %}
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="locationofplace" class="form-label">Location of Places</label>
+                            <input type="text" name="locationofplace" id="locationofplace" class="form-control {{ errors.locationofplace ? 'has-error' : ''}}"
+                                value="{{ old.locationofplace }}">
+                            {% if errors.locationofplace %}
+                            <span class="
+                                text text-danger">{{ errors.locationofplace |
+                                first }}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="district" class="form-label">District</label>
+                            <input type="text" name="district" id="district" class="form-control {{ errors.district ? 'has-error' : ''}}"
+                                value="{{ old.district }}">
+                            {% if errors.district %}
+                            <span class="
+                                text text-danger">{{ errors.district | first
+                                }}</span>
+                            {% endif %}
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="intrestingthing" class="form-label">Intresting Things</label>
+                            <input type="text" name="intrestingthing" id="intrestingthing" class="form-control {{ errors.intrestingthing ? 'has-error' : ''}}"
+                                value="{{ old.intrestingthing }}">
+                            {% if errors.intrestingthing %}
+                            <span class="
+                                text text-danger">{{ errors.intrestingthing |
+                                first }}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="image1" class="form-label">Images</label>
+                            <input type="file" name="image1" id="image1" class="form-control {{ errors.image2 ? 'has-error' : ''}}"
+                                accept="image/*" required>
+                            {% if errors.image1 %}
+                            <span class="text text-danger">{{ errors.image1 | first }}</span>
+                            {% endif %}
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="image2" class="form-label">Images</label>
+                            <input type="file" name="image2" id="image2" class="form-control {{ errors.image2 ? 'has-error' : ''}}"
+                                accept="image/*" required>
+                            {% if errors.image2 %}
+                            <span class="text text-danger">{{ errors.image2 | first }}</span>
+                            {% endif %}
+
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="description" class="form-label">Description Of Place</label>
+                            {# <input type="text" name="description" id="description" class="form-control"> #}
+                            <textarea name="description" id="description" rows="3" class="form-control {{ errors.description ? 'has-error' : ''}}">{{ old.description }}</textarea>
+                            {% if errors.description %}
+                            <span class="text text-danger">{{ errors.description | first }}</span>
+                            {% endif %}
+
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="details" class="form-label">Details Of Place</label>
+                            <textarea name="details" id="details" rows="3" class="form-control {{ errors.details ? 'has-error' : ''}}">{{ old.details }}</textarea>
+                            {% if errors.details %}
+                            <span class="text text-danger">{{ errors.details | first }}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="form-row mx-auto w-25">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- ------------------------------------------------------------------------------------------------------------------- -->
+    <!-- main content ends -->
+</div>
+<!-- main body ends -->
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
+
+</div>
+<!-- body parts ends -->
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
+
+{% endblock %}

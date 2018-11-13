@@ -1,0 +1,107 @@
+{% extends 'templetes/app.twig' %}
+
+{% block content %}
+
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
+<!-- main body starts -->
+
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-10 main-body" id="main-body">
+
+    <!-- main content starts -->
+    <!-- -------------------------------------------------------------------------------------------------------------------- -->
+
+    <div class=" main-content">
+        <div class=" row body-header clearfix">
+            <div class="col-md-6 col-lg-4 col-xl-4">
+                <h6 class="page-title">
+                    Dashboard
+                </h6>
+            </div>
+            <div class="bread col-md-6 col-lg-8 col-xl-8">
+                <nav class="breadcrumb">
+                    <span class="breadcrumb-item">Dashboard</span>
+                    <span class="breadcrumb-item">Tourism Places</span>
+                    <span class="breadcrumb-item">Edit</span>
+                </nav>
+            </div>
+        </div>
+
+
+        <div class="clearfix"></div>
+        <div class="card mt-3 mb-3">
+
+            <div class="card-header">
+                Edit Tourism Places
+
+            </div>
+            <div class="card-body">
+                <form action="{{ path_for('home.putTourism') }}" method="POST" enctype="multipart/form-data" class="form-horizantal"
+                    id="cardaddform" autocomplete="off">
+                    <input type="hidden" name="id" value="{{ tourism.id }}">
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="nameofplace" class="form-label">Name of The Place</label>
+                            <input type="text" name="nameofplace" id="nameofplace" class="form-control" value="{{ tourism.nameofplace }}">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="locationofplace" class="form-label">Location of Places</label>
+                            <input type="text" name="locationofplace" id="locationofplace" class="form-control" value="{{ tourism.locationofplace }}">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="district" class="form-label">District</label>
+                            <input type="text" name="district" id="district" class="form-control" value="{{ tourism.district }}">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="intrestingthing" class="form-label">Intresting Things</label>
+                            <input type="text" name="intrestingthing" id="intrestingthing" class="form-control" value="{{ tourism.intrestingthing }}">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="image1" class="form-label">Images</label>
+                            <input type="file" name="image1" id="image1" class="form-control" accept="image/*">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="image2" class="form-label">Images</label>
+                            <input type="file" name="image2" id="image2" class="form-control" accept="image/*">
+
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="description" class="form-label">Description Of Place</label>
+                            {# <input type="text" name="description" id="description" class="form-control"> #}
+                            <textarea name="description" id="description" rows="3" class="form-control">{{ tourism.description }}</textarea>
+
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="details" class="form-label">Details Of Place</label>
+                            <textarea name="details" id="details" rows="3" class="form-control">{{ tourism.details }}</textarea>
+                        </div>
+                    </div>
+                    <div class="form-row mx-auto w-25">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- ------------------------------------------------------------------------------------------------------------------- -->
+    <!-- main content ends -->
+</div>
+<!-- main body ends -->
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
+
+</div>
+<!-- body parts ends -->
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
+
+{% endblock %}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        {{ title }}
+    </title>
+    <link rel="stylesheet" href="{{ base_url() }}/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ base_url() }}/css/datatables.min.css">
+    <link rel="stylesheet" href="{{ base_url() }}/css/metisMenu.min.css">
+    <link rel="stylesheet" href="{{ base_url() }}/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ base_url() }}/css/nepali.datepicker.v2.2.min.css">
+
+    <link rel="stylesheet" href="{{ base_url() }}/css/custom.min.css">
+</head>
+
+<body>
+
+    {% include 'templetes/partials/header.php' %}
+    {% include 'templetes/partials/sidebar.php' %}
+
+    {#
+    {% if flash.getMessage('success') %}
+
+    <span class="alert alert-success custom-message">
+
+        {{ flash.getMessage('success') | first }}
+
+    </span>
+
+    {% endif %} #}
+
+
+    {% block content %}
+
+    {% endblock %}
+
+
+    <!-- ------------------------------------------------------------------------------------------------------------------------ -->
+    <!-- footer starts -->
+    <footer>
+        <p>Travel Nepal</p>
+    </footer>
+
+    <!-- footer ends -->
+    <!-- ------------------------------------------------------------------------------------------------------------------------ -->
+
+    </div>
+
+
+    <script src="{{ base_url() }}/js/jquery.min.js"></script>
+    <script src="{{ base_url() }}/js/popper.min.js"></script>
+    <script src="{{ base_url() }}/js/bootstrap.min.js"></script>
+    <script src="{{ base_url() }}/js/datatables.min.js"></script>
+    <script src="{{ base_url() }}/js/metisMenu.min.js"></script>
+    <script src="{{ base_url() }}/js/nepali.datepicker.v2.2.min.js"></script>
+    <script src="{{ base_url() }}/js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.fn.dataTable.Responsive.breakpoints = [{
+                    name: 'desktop',
+                    width: Infinity
+                },
+                {
+                    name: 'tablet',
+                    width: 1024
+                },
+                {
+                    name: 'fablet',
+                    width: 768
+                },
+                {
+                    name: 'phone',
+                    width: 480
+                }
+            ];
+
+            $('.dateNepali').nepaliDatePicker();
+
+            $("#menu").metisMenu({
+                toggle: false,
+                activeClass: 'mmactive'
+            });
+
+            var tablehotel = $('#tableHotel').DataTable({
+                responsive: true,
+                buttons: true
+            });
+
+            tablehotel
+                .buttons()
+                .container()
+                .appendTo('#controlpanel');
+
+
+            var tablefestival = $('#tableFestival').DataTable({
+                responsive: true,
+                buttons: true
+            });
+
+            tablefestival
+                .buttons()
+                .container()
+                .appendTo('#controlpanel');
+
+
+            var tablepartner = $('#tablePartner').DataTable({
+                responsive: true,
+                buttons: true
+            });
+
+            tablepartner
+                .buttons()
+                .container()
+                .appendTo('#controlpanel');
+
+            var tabletourism = $('#tableTourism').DataTable({
+                responsive: true,
+                buttons: true
+            });
+
+            tabletourism
+                .buttons()
+                .container()
+                .appendTo('#controlpanel');
+        });
+    </script>
+
+</body>
+
+</html>
